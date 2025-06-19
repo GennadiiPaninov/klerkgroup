@@ -1,0 +1,103 @@
+.footer {
+  background: var(--color-footer-bg);
+  padding: 3rem 0;
+  &__container{
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    div{
+      &:nth-child(1){
+        border-right: .1rem solid #C3C3C3;
+        @include breakpoint($sm-bp) {
+          border-right:unset;
+        }
+      }
+      &:nth-child(3){
+        border-left: .1rem solid #C3C3C3;
+        @include breakpoint($sm-bp) {
+          border-left:unset;
+        }
+      }
+
+    }
+    @include breakpoint($sm-bp) {
+      flex-direction: column-reverse;
+    }
+  }
+  .rights{
+    width: 100%;
+  }
+  .social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 120%;
+    .link{
+      color: #C3C3C3;
+      transition: .3s all;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      &:active{
+        color: #808080;
+      }
+      &:hover{
+        color: #A0A0A0;
+      }
+      .icon{
+        width: 2rem;
+        height: 2rem;
+      }
+      @include breakpoint($sm-bp) {
+        gap: .5rem;
+      }
+    }
+    @include breakpoint($sm-bp) {
+      width: 100%;
+      justify-content: start;
+      gap: 1rem;
+    }
+
+  }
+  .other{
+    width: 100%;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    a{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 150%;
+      color: var(--color-white);
+      text-decoration: unset;
+      &:active{
+        color: #808080;
+      }
+      &:hover{
+        color: #A0A0A0;
+      }
+      @include breakpoint($sm-bp) {
+      gap: .5rem;
+      }
+    }
+    .icon{
+      width: 2rem;
+      height: 2rem;
+    }
+    @include breakpoint($sm-bp) {
+      justify-content: start;
+      gap: 1rem;
+    }
+  }
+
+}

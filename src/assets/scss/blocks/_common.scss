@@ -1,0 +1,160 @@
+
+.btn{
+  box-sizing: border-box;
+  display: flex;
+  padding: 1.5rem 3.148rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: .4rem;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  span{
+    min-width: 12.05rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 1.3rem;
+    padding: .5rem 2.1rem;
+  }
+}
+.btn-primary{
+  border: 1px solid var(--color-white);
+
+
+  align-items: center;
+  color: var(--color-white);
+
+  background: var(--color-blue-3);
+  &:hover {
+    background: #3490dc;
+  }
+  &:active {
+    background: #2980b9;
+  }
+
+}
+.btn-secondary{
+  border: 1px solid var(--color-gray);
+  font-weight: 400;
+  align-items: center;
+  color: var(--color-gray-2);
+  text-transform: uppercase;
+  background: var(--color-white);
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #f0f0f0;
+  }
+  &:active {
+    background: #d0d0d0;
+  }
+}
+
+
+.link {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--color-blue);
+  }
+  &:active{
+    color: var(--color-blue-3);
+  }
+}
+
+.blue {
+  color: var(--color-blue);
+}
+
+.circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .5rem solid #286690;
+  background: var(--color-blue-3);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+
+  .icon{
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  @include breakpoint($sm-bp) {
+    width: 3rem;
+    height: 3rem;
+    border: .2rem solid #286690;
+    .icon{
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+}
+
+
+.modal {
+  overflow: auto;
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: var(--color-dark-45);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+
+  &-content {
+    position: relative;
+    max-width: var(--block-width-xl);
+    margin: auto;
+
+    @include breakpoint($sm-bp) {
+      max-width: var(--block-width-sm);
+      font-size: 2rem;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    top: 1.2rem;
+    right: 1.2rem;
+    border: none;
+    color: var(--color-dark);
+    background-color: unset;
+    transition: color 0.3s;
+    cursor: pointer;
+
+    & svg {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+
+    &:hover {
+      color: var(--color-red);
+    }
+  }
+  
+  &--open {
+    opacity: 1;
+  }
+}
+
+@import './common/nav-list.scss';
+@import './common/_order.scss';
+@import './common/_select.scss';
+@import './common/_input.scss';
+@import './common/_slider.scss';
+@import './common/_success.scss';

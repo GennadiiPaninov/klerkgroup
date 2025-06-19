@@ -1,0 +1,48 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--color-bg-10);
+  padding: 3.35rem 0 3.15rem 0;
+  z-index: 20;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h2 {
+      font-family: "Raleway", serif;
+      font-weight: 800;
+      font-size: 2.8rem;
+      line-height: 3.5rem;
+      text-transform: uppercase;
+      color: var(--color-white);
+    }
+
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    display: none;
+    background: var(--color-blue-3);
+    @include breakpoint($sm-bp) {
+      border-radius: .6rem 0 .6rem 0;
+      display: flex;
+      .icon{
+        width: 2rem;
+        height: 2rem;
+
+      }
+    }
+  }
+  @include breakpoint($sm-bp) {
+    background: transparent;
+    padding:0;
+  }
+}

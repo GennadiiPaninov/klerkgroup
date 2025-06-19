@@ -1,0 +1,54 @@
+.input {
+  position: relative;
+  padding: 1.2rem 3.552rem 1.2rem 1rem;
+  background: var(--color-bg-2);
+  font-size: 1.8rem;
+  line-height: 130%;
+  width: 37rem;
+  border-radius: .4rem;
+  input {
+    border: unset;
+    background: transparent;
+
+    &:focus {
+      border: unset;
+      outline: unset;
+    }
+
+    &::placeholder {
+      color: var(--color-bg);
+    }
+    @include breakpoint($sm-bp) {
+      width: 100%;
+    }
+  }
+
+  &.error {
+    border: 1px solid red;
+  }
+
+  .input__error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    color: red;
+    font-size: 1.2rem;
+    margin-top: .4rem;
+    @include breakpoint($sm-bp) {
+      font-size: .9rem;
+      margin-top: .2rem;
+    }
+  }
+
+  &.error .input__error {
+    display: block;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 1.3rem;
+    width: 99%;
+    margin: 0 auto;
+    padding: 1.2rem 3.552rem 1.2rem 1rem;
+  }
+}
+

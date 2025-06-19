@@ -1,0 +1,94 @@
+.intro {
+  picture{
+    @include breakpoint($sm-bp) {
+      width: 100%;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 130%;
+    text-transform: uppercase;
+    max-width: 78rem;
+    @include breakpoint($sm-bp) {
+      max-width: 33.5rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    position: absolute;
+    left: 37.5rem;
+    top: 20.3rem;
+
+
+    &-text {
+      font-size: 2rem;
+      line-height: 120%;
+      max-width: 53.4rem;
+
+      p {
+        &:first-of-type {
+          font-weight: 700;
+          margin-bottom: 1rem;
+          @include breakpoint($sm-bp) {
+            margin-bottom: .5rem;
+          }
+        }
+
+        &:not(:first-of-type) {
+          display: flex;
+          font-weight: 400;
+          margin-bottom: .5rem;
+          &::before {
+            content: '-';
+            display: block;
+            width: 2.494rem;
+            height: 2.151rem;
+            text-align: center;
+          }
+          @include breakpoint($sm-bp) {
+            margin-bottom: .2rem;
+          }
+        }
+      }
+      @include breakpoint($sm-bp) {
+        font-size: 1.1rem;
+      }
+    }
+    &-controller{
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+
+      button{
+        height: 4.3rem;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint($sm-bp) {
+          height: 4rem;
+          width: 18rem;
+        }
+      }
+      @include breakpoint($sm-bp) {
+        gap: 1rem;
+        flex-direction: column;
+      }
+
+    }
+    @include breakpoint($sm-bp) {
+      top: 2rem;
+      left: 1rem;
+      width: 33.5rem;
+    }
+  }
+
+}

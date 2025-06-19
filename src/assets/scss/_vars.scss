@@ -1,0 +1,22 @@
+:root {
+  --block-width-xl: 117.2rem;
+  --block-width-sm: 34.4rem;
+  
+  --font-main: "Lato";
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-2: #2A2B30;
+  --color-bg: #272733;
+  --color-bg-10: #10101DE5;
+  --color-gray: #6F6D7B;
+  --color-gray-opasity: rgba(111, 109, 123, 0.7);
+  --color-blue: #43ABF0;
+  --color-blue-3: #3E9CDC;
+  --color-bg-2: #FFFFFFD9;
+  --color-footer-bg:#3D4050;
+}
+
+// Брэйкпоинты
+$md-bp: 1024px;
+$sm-bp: 768px;

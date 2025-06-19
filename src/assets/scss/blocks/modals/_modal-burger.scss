@@ -1,0 +1,26 @@
+.modal-burger {
+  display: none;
+  flex-direction: column;
+  z-index: 200;
+  &__content {
+    overflow: auto;
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    padding: 4rem 1.6rem;
+    border-radius: 1rem;
+    background-color: var(--color-white);
+    .modal-close{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: .3rem;
+      color: var(--color-black);
+      border: .1rem solid var(--color-blue);
+    }
+  }
+
+}
+.modal-burger.modal--open{
+  background: var(--color-gray-opasity);
+}

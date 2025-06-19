@@ -1,0 +1,118 @@
+<section class="section order " id="order-section">
+    <div class="container order__container">
+        <div class="order__title">
+            <h3>Оформление <span class="blue">Заказа</span></h3>
+            <p>Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+        </div>
+        <div class="order__advantages">
+            <svg class="order__advantages-points">
+                <use href="#points-icon"/>
+            </svg>
+            <div class="item">
+                <div class="circle">
+                    <svg class="icon">
+                        <use href="#search-icon"/>
+                    </svg>
+                </div>
+                <p>
+                    Lorem ipsum dolor
+                    sit amet
+                </p>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <svg class="icon">
+                        <use href="#percentages-icon"/>
+                    </svg>
+                </div>
+                <p>
+                    Сonsecteturadipiscing elit
+                </p>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <svg class="icon">
+                        <use href="#file-icon"/>
+                    </svg>
+                </div>
+                <p>
+                    Sed do eiusmod tempor
+                </p>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <svg class="icon">
+                        <use href="#message-icon"/>
+                    </svg>
+                </div>
+
+                <p>
+                    Esse cillum dolore
+                    eu fugiat
+                </p>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <svg class="icon">
+                        <use href="#money-icon"/>
+                    </svg>
+                </div>
+                <p>
+                    Excepteur sint occaecat cupidatat non proident
+                </p>
+            </div>
+        </div>
+        <form class="order__form">
+            <div class="form__field select">
+                <div class="select__box" id="systemSelect">
+                    <div class="select__trigger">
+                        Выберите тип системы
+                        <svg class="icon">
+                            <use href="#select-arrow"/>
+                        </svg>
+                    </div>
+                    <div class="select__options">
+                        <div class="select__option" data-value="Sed ut perspiciatis">Sed ut perspiciatis</div>
+                        <div class="select__option" data-value="Nemo enim ipsam">Nemo enim ipsam</div>
+                        <div class="select__option" data-value="Et harum quidem">Et harum quidem</div>
+                        <div class="select__option" data-value="Temporibus autem">Temporibus autem</div>
+                        <div class="select__option" data-value="Itaque earum rerum">Itaque earum rerum</div>
+                        <div class="select__option" data-value="Sed ut perspiciatis">Sed ut perspiciatis</div>
+                        <div class="select__option" data-value="Nemo enim ipsam">Nemo enim ipsam</div>
+                        <div class="select__option" data-value="Et harum quidem">Et harum quidem</div>
+                        <div class="select__option" data-value="Temporibus autem">Temporibus autem</div>
+                        <div class="select__option" data-value="Itaque earum rerum">Itaque earum rerum</div>
+                    </div>
+                </div>
+                <input type="hidden" name="system" id="selectedSystem" class="select__hidden-input">
+                <div class="select__error" id="selectError">Пожалуйста, выберите тип системы</div>
+            </div>
+            <div class="input">
+                <input type="text" name="email" placeholder="Ваш e-mail" required>
+                <div class="input__error" data-error-for="email">Введите корректный email</div>
+            </div>
+            <div class="input">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <div class="input__error" data-error-for="name">Имя должно быть от 3 до 20 символов</div>
+            </div>
+
+            <div class="form__slider">
+                <label for="slider" class="form__slider-label">Sed ut perspiciatis, unde omnis iste natus</label>
+                <div class="slider-wrapper">
+                    <input type="range" id="slider" name="slider" min="0" max="100" value="0">
+                </div>
+                <span class="slider-value" >0%</span>
+            </div>
+            <label class="btn btn-secondary attach-btn">
+                <svg class="icon">
+                    <use href="#doc-icon" />
+                </svg>
+                <span>Прикрепить файл</span>
+                <input type="file" class="attach-btn__input" name="document" />
+            </label>
+
+            <button class="btn btn-primary form__submit" type="submit">Отправить</button>
+        </form>
+    </div>
+
+</section>

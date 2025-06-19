@@ -1,0 +1,89 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor/normalize";
+@import './vendor/fancyboxCDN.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+html {
+  font-size: calc(100vw / 1920 * 10);
+
+
+  @include breakpoint($sm-bp) {
+    font-size: calc(100vw / 375 * 10);
+  }
+
+  background-color: var(--color-white);
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-black);
+}
+
+*,
+*:before,
+*:after {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+picture {
+  display: inline-block;
+}
+
+img {
+  vertical-align: middle;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1 {
+  margin: initial;
+}
+
+.hide {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  margin: -0.1rem;
+  clip: rect(0 0 0 0);
+}
+
+.disabled {
+  display: none !important;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.upper{
+  text-transform: uppercase;
+}
+.section {
+  width: 100%;
+}
+.container {
+  max-width: var(--block-width-xl);
+  margin: 0 auto;
+  @include breakpoint($sm-bp) {
+    max-width: var(--block-width-sm);
+  }
+}
+
+@import './blocks/common.scss';
+@import './blocks/header.scss';
+@import './blocks/main.scss';
+@import './blocks/footer.scss';
+@import './blocks/modals.scss';

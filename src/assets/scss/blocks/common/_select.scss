@@ -1,0 +1,122 @@
+.select {
+  position: relative;
+  width: 37rem;
+
+  &__box {
+    background: #FFFFFFD9;
+    color: var(--color-bg);
+    border: 1px solid var(--color-white);
+
+    border-radius: .3rem;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.8rem;
+    .icon{
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      top: 50%;
+      right: 1.052rem;
+      transform: translate(0, -50%);
+      transition: all .3s;
+    }
+
+    &--open .select__options {
+      display: block;
+    }
+    &--open .icon{
+      transform: rotate(180deg) translate(0, 50%);
+    }
+    &--error {
+      border-color: red;
+
+      .select__trigger {
+        color: red;
+      }
+    }
+    @include breakpoint($sm-bp) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__trigger {
+    padding: 1.2rem 1rem;
+    @include breakpoint($sm-bp) {
+      padding: .9rem 1rem;
+    }
+  }
+
+  &__options {
+    display: none;
+    background: #1e1e2f;
+    border: 1px solid #333;
+    border-top: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 20rem;
+    z-index: 5;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-blue) transparent;
+
+    &::-webkit-scrollbar {
+      width: .7rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-blue);
+      border-radius:.3rem;
+
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none;
+      width: 0;
+      height: 0;
+      background: none;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-blue) transparent;
+    @include breakpoint($sm-bp) {
+      max-height: 10rem;
+    }
+  }
+
+  &__option {
+    padding: 1rem;
+    color: #ccc;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #2d2d3f;
+      color: var(--color-blue);
+    }
+    @include breakpoint($sm-bp) {
+      padding: .8rem;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+    font-size: 1.2rem;
+    margin-top: .4rem;
+    display: none;
+    @include breakpoint($sm-bp) {
+      font-size: .8rem;
+      margin-top: .1rem;
+    }
+  }
+  @include breakpoint($sm-bp) {
+    width: 100%;
+  }
+}

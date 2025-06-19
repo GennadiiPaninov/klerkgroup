@@ -1,0 +1,9 @@
+<nav class="nav{{ class }}">
+  <ul class="nav__list">
+    {{#each constants.navList}}
+      <li class="nav__list-item">
+          <a class="nav__list-item-link link" href="{{ this.link }}">{{ this.name }}</a>
+      </li>
+    {{/each}}
+  </ul>
+</nav>
