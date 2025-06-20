@@ -38,6 +38,7 @@
   ],
   "dependencies": {
     "highlight.js": "^11.10.0",
-    "postcss-selector-parser": "^7.0.0"
+    "postcss-selector-parser": "^7.0.0",
+    "simplebar": "^6.3.1"
   }
 }

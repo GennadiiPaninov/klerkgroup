@@ -57,38 +57,30 @@
     right: 0;
     max-height: 20rem;
     z-index: 5;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-blue) transparent;
 
-    &::-webkit-scrollbar {
-      width: .7rem;
-    }
 
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--color-blue);
-      border-radius:.3rem;
-
-    }
-
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    &::-webkit-scrollbar-button {
-      display: none;
-      width: 0;
-      height: 0;
-      background: none;
-    }
-
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-blue) transparent;
     @include breakpoint($sm-bp) {
       max-height: 10rem;
     }
   }
+  [data-simplebar] {
+    .simplebar-track.simplebar-vertical {
+      width: 0.7rem;
+      background: #3D4050;
+      border-radius: 0.3rem;
+      right: 0;
+    }
 
+    .simplebar-scrollbar {
+      background-color: var(--color-blue);
+      border-radius: 0.3rem;
+
+      &::before {
+        background-color: var(--color-blue);
+        border-radius: 0.3rem;
+      }
+    }
+  }
   &__option {
     padding: 1rem;
     color: #ccc;
